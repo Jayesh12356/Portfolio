@@ -46,7 +46,7 @@ export function About() {
           variants={cardContainer}
           className="relative"
         >
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-border bg-panel shadow-[0_0_60px_rgba(255,46,99,0.10)]">
+          <div className="relative w-full overflow-hidden rounded-3xl border border-border bg-panel shadow-[0_0_60px_rgba(255,46,99,0.10)] md:aspect-[4/5]">
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-accent/15 via-transparent to-transparent" />
             <div className="pointer-events-none absolute inset-0 bg-grid opacity-25" />
             <div className="pointer-events-none absolute -inset-px rounded-3xl ring-1 ring-inset ring-accent/15" />
@@ -100,7 +100,7 @@ export function About() {
 
               <motion.div
                 variants={cardItem}
-                className="mt-auto grid grid-cols-2 gap-3 pt-6"
+                className="mt-6 grid grid-cols-2 gap-3 pt-6 md:mt-auto"
               >
                 {CRED_STATS.map((s) => (
                   <div

@@ -1,0 +1,42 @@
+{
+  "name": "jayesh-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:cv": "node scripts/generate-cv-pdf.mjs",
+    "build:portrait": "node scripts/process-portrait.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "2.1",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.0",
+    "clsx": "2.1",
+    "framer-motion": "^12.38.0",
+    "gsap": "3.12",
+    "lenis": "1.1",
+    "lucide-react": "^0.460.0",
+    "next": "^15.5.15",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "resend": "^6.12.2",
+    "tailwind-merge": "2.5",
+    "three": "^0.169.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^22.19.17",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.169.0",
+    "pdfkit": "^0.18.0",
+    "postcss": "^8.5.11",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.4",
+    "typescript": "5.6"
+  }
+}

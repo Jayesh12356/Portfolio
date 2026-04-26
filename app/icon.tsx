@@ -22,7 +22,7 @@ export default function Icon() {
           borderRadius: "50%",
         }}
       >
-        J
+        JK
       </div>
     ),
     { ...size }

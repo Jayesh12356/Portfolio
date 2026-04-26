@@ -123,7 +123,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: PRELOADER_OFFSET + 1.25, duration: 0.6 }}
-            className="flex flex-wrap items-center gap-3 pt-2"
+            className="flex flex-col items-stretch gap-3 pt-2 sm:flex-row sm:flex-wrap sm:items-center"
           >
             <motion.div
               animate={reduce ? undefined : { scale: [1, 1.018, 1] }}
@@ -133,10 +133,22 @@ export function Hero() {
                 repeat: Infinity,
                 delay: PRELOADER_OFFSET + 2.0,
               }}
+              className="w-full sm:w-auto"
             >
-              <GlowButton href="#contact">Hire Me</GlowButton>
+              <GlowButton
+                href="#contact"
+                wrapperClassName="block w-full sm:inline-block sm:w-auto"
+                className="w-full sm:w-auto"
+              >
+                Hire Me
+              </GlowButton>
             </motion.div>
-            <GlowButton href="#projects" variant="outline">
+            <GlowButton
+              href="#projects"
+              variant="outline"
+              wrapperClassName="block w-full sm:inline-block sm:w-auto"
+              className="w-full sm:w-auto"
+            >
               View Work
             </GlowButton>
           </motion.div>

@@ -68,9 +68,9 @@ export function About() {
                   <span className="font-display text-sm leading-none text-accent">
                     JK
                   </span>
-                  <span className="absolute -right-0.5 -top-0.5 flex h-2.5 w-2.5">
+                  <span className="absolute right-0.5 top-0.5 flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-70" />
-                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
                   </span>
                 </div>
               </motion.div>
@@ -178,7 +178,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="grid grid-cols-3 gap-4 border-y border-border/60 py-6"
+            className="grid grid-cols-3 gap-3 border-y border-border/60 py-6 sm:gap-4"
           >
             {[
               { label: "Experience", value: "4+ yrs" },
@@ -186,7 +186,7 @@ export function About() {
               { label: "Domains", value: "Fin · GenAI" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="font-display text-3xl leading-none md:text-4xl">
+                <div className="font-display text-2xl leading-none sm:text-3xl md:text-4xl">
                   {stat.value}
                 </div>
                 <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-text-mute">
@@ -201,13 +201,23 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, delay: 0.55 }}
-            className="flex flex-wrap items-center gap-3"
+            className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
           >
-            <GlowButton href="/Jayesh-Koli-CV.pdf" download="Jayesh-Koli-CV.pdf">
+            <GlowButton
+              href="/Jayesh-Koli-CV.pdf"
+              download="Jayesh-Koli-CV.pdf"
+              wrapperClassName="block w-full sm:inline-block sm:w-auto"
+              className="w-full sm:w-auto"
+            >
               <Download size={14} strokeWidth={2} />
               Download CV
             </GlowButton>
-            <GlowButton href="#experience" variant="outline">
+            <GlowButton
+              href="#experience"
+              variant="outline"
+              wrapperClassName="block w-full sm:inline-block sm:w-auto"
+              className="w-full sm:w-auto"
+            >
               <FileText size={14} strokeWidth={1.6} />
               View Experience
             </GlowButton>

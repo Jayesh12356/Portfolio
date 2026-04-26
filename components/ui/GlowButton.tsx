@@ -13,6 +13,7 @@ type Props = {
   variant?: Variant;
   size?: "sm" | "md" | "lg";
   className?: string;
+  wrapperClassName?: string;
   magnetic?: boolean;
   download?: string | boolean;
   target?: string;
@@ -35,6 +36,7 @@ export const GlowButton = forwardRef<HTMLAnchorElement, Props>(function GlowButt
     variant = "primary",
     size = "md",
     className,
+    wrapperClassName,
     magnetic = true,
     download,
     target,
@@ -86,7 +88,7 @@ export const GlowButton = forwardRef<HTMLAnchorElement, Props>(function GlowButt
         href={href}
         target={target}
         download={download as string | undefined}
-        className="inline-block"
+        className={cn("inline-block", wrapperClassName)}
         data-cursor="hover"
       >
         {content}
@@ -102,6 +104,7 @@ export const GlowButton = forwardRef<HTMLAnchorElement, Props>(function GlowButt
       className={cn(
         "inline-block",
         disabled && "cursor-not-allowed opacity-60 pointer-events-none",
+        wrapperClassName,
       )}
       data-cursor="hover"
     >
